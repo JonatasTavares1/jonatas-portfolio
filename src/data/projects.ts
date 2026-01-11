@@ -16,11 +16,11 @@ export type ProjectLink = {
 
 
 
-import img1 from "../assets/images/projetos/sistema-veiculacoes/veiculacoes-1.png"
-import img2 from "../assets/images/projetos/sistema-veiculacoes/veiculacoes-2.png"
-import img3 from "../assets/images/projetos/sistema-veiculacoes/veiculacoes-3.png"
-import img4 from "../assets/images/projetos/dash-financeiro/dash-financeiro.png"
-import img5 from "../assets/images/projetos/Dash-omni/dash-omni.png"
+/*import img1 from "./public/projetos/sistema-veiculacoes/veiculacoes-1.png"
+import img2 from "./public/projetos/sistema-veiculacoes/veiculacoes-2.png"
+import img3 from "./public/images/projetos/sistema-veiculacoes/veiculacoes-3.png"
+import img4 from "./public/images/projetos/dash-financeiro/dash-financeiro.png"
+import img5 from "./public/images/projetos/Dash-omni/dash-omni.png"*/
 
 export const projects: Project[] = [
 {
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     subtitle: "Gestão de receitas por área de atuação, visualizações inteligentes de gastos e DRE consolidado",
     description:
       "Dashboard com visões detalhadas acerca das finanças da empresa, com base nos custos e receitas orçadas e realizadas, além de um DRE Consolidado do faturamento x lucro",
-    image: [img4],
+    image: ["/projetos/dash-financeiro/dash-financeiro.png"],
     stack: ["Power BI", "Excel", "Python", "Figma & Design System", "SQL"],
     highlights: [
       "O dashboard foi estruturado para oferecer uma análise financeira dinâmica e executiva, com foco em desempenho, comparativos e tomada de decisão.",
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     subtitle: "Gestão de PIs, anunciantes, agências, filtros e exportação",
     description:
       "Painel interativo para análise de vendas e seguros, com KPIs de penetração, prêmio, ticket médio e comissões, além de comparativos por produto, agente e período. Desenvolvido com foco em tomada de decisão executiva.",
-    image: [img5],
+    image: ["/projetos/Dash-omni/dash-omni.png"],
     stack: ["Power BI", "Excel", "Figma & Design System"],
     highlights: [
       "KPIs estratégicos de performance comercial e financeira",
@@ -82,7 +82,11 @@ export const projects: Project[] = [
     subtitle: "Gestão de PIs, anunciantes, agências, filtros e exportação",
     description:
       "Sistema full stack voltado ao fluxo comercial, com regras de negócio, modelagem relacional e recursos analíticos (filtros, exportações e painéis).",
-    image: [img1, img2, img3],
+    image: [
+      "/projetos/sistema-veiculacoes/veiculacoes-1.png",
+      "/projetos/sistema-veiculacoes/veiculacoes-2.png",
+      "/projetos/sistema-veiculacoes/veiculacoes-3.png",
+    ],
     stack: ["React", "TypeScript", "Python", "FastAPI", "SQL"],
     highlights: [
       "CRUDs com regras de negócio e validações",
