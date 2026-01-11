@@ -16,9 +16,9 @@ export type ProjectLink = {
 
 
 
-import img1 from "../assets/images/projetos/sistema-veiculacoes/veiculacoes-1.png"
-import img2 from "../assets/images/projetos/sistema-veiculacoes/veiculacoes-2.png"
-import img3 from "../assets/images/projetos/sistema-veiculacoes/veiculacoes-3.png"
+import img1 from "../assets/images/projetos/sistema-veiculacoes/veiculacoes-1.PNG"
+import img2 from "../assets/images/projetos/sistema-veiculacoes/veiculacoes-2.PNG"
+import img3 from "../assets/images/projetos/sistema-veiculacoes/veiculacoes-3.PNG"
 import img4 from "../assets/images/projetos/dash-financeiro/dash-financeiro.png"
 import img5 from "../assets/images/projetos/Dash-omni/dash-omni.png"
 
