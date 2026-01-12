@@ -162,70 +162,69 @@ export function ImageCarousel({ images, altBase = "Preview", className = "" }: P
       ) : null}
 
       {/* MODAL FULLSCREEN (ZOOM) */}
-      {isZoomOpen ? (
-        <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 p-4"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Imagem ampliada"
-          onMouseDown={(e) => {
-            // fecha quando clicar no backdrop
-            if (e.target === e.currentTarget) closeZoom()
-          }}
+{isZoomOpen ? (
+  <div
+    className="fixed inset-0 z-[9999] bg-black/85"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Imagem ampliada"
+    onMouseDown={(e) => {
+      if (e.target === e.currentTarget) closeZoom()
+    }}
+  >
+    <div className="flex h-full w-full items-center justify-center p-4">
+      <div className="relative">
+        {/* Botão fechar */}
+        <button
+          type="button"
+          onClick={closeZoom}
+          className="absolute -top-12 right-0 rounded-xl border border-zinc-700 bg-black/50 px-3 py-2 text-sm font-semibold text-white backdrop-blur transition hover:bg-black/70"
+          aria-label="Fechar"
+          title="Fechar (Esc)"
         >
-          <div className="relative w-full max-w-[80vw]">
-            {/* Botão fechar */}
-            <button
-              type="button"
-              onClick={closeZoom}
-              className="absolute right-0 top-0 -translate-y-14 rounded-xl border border-zinc-700 bg-black/40 px-3 py-2 text-sm font-semibold text-white backdrop-blur transition hover:bg-black/60"
-              aria-label="Fechar"
-              title="Fechar (Esc)"
-            >
-              Fechar ✕
-            </button>
+          Fechar ✕
+        </button>
 
-            {/* Imagem ampliada */}
-            <div className="max-h-[85vh] w-full overflow-hidden rounded-2xl border border-zinc-700 bg-black/30">
-              <img
-                src={currentSrc}
-                alt={`${altBase} ampliada ${index + 1}`}
-                className="h-full w-full object-contain"
-              />
-            </div>
+        {/* Imagem ampliada (SEM aspect fixo) */}
+        <img
+          src={currentSrc}
+          alt={`${altBase} ampliada ${index + 1}`}
+          className="max-h-[95vh] max-w-[95vw] object-contain rounded-2xl border border-zinc-700 bg-black/20"
+        />
 
-            {/* Controles no modal */}
-            <div className="mt-3 flex items-center justify-between gap-3 text-white">
-              <div className="text-xs opacity-80">
-                {index + 1} / {safeImages.length} — Use ← → para navegar • Esc para fechar
-              </div>
-
-              {canNavigate ? (
-                <div className="flex gap-2">
-                  <button
-                    type="button"
-                    onClick={prev}
-                    className="rounded-xl border border-zinc-700 bg-black/40 px-3 py-2 text-sm font-semibold backdrop-blur transition hover:bg-black/60"
-                    aria-label="Anterior"
-                    title="Anterior (←)"
-                  >
-                    ←
-                  </button>
-                  <button
-                    type="button"
-                    onClick={next}
-                    className="rounded-xl border border-zinc-700 bg-black/40 px-3 py-2 text-sm font-semibold backdrop-blur transition hover:bg-black/60"
-                    aria-label="Próxima"
-                    title="Próxima (→)"
-                  >
-                    →
-                  </button>
-                </div>
-              ) : null}
-            </div>
+        {/* Controles (não roubam área da imagem) */}
+        <div className="mt-3 flex items-center justify-between gap-3 text-white">
+          <div className="text-xs opacity-80">
+            {index + 1} / {safeImages.length} — Use ← → para navegar • Esc para fechar
           </div>
+
+          {canNavigate ? (
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={prev}
+                className="rounded-xl border border-zinc-700 bg-black/50 px-3 py-2 text-sm font-semibold backdrop-blur transition hover:bg-black/70"
+                aria-label="Anterior"
+                title="Anterior (←)"
+              >
+                ←
+              </button>
+              <button
+                type="button"
+                onClick={next}
+                className="rounded-xl border border-zinc-700 bg-black/50 px-3 py-2 text-sm font-semibold backdrop-blur transition hover:bg-black/70"
+                aria-label="Próxima"
+                title="Próxima (→)"
+              >
+                →
+              </button>
+            </div>
+          ) : null}
         </div>
-      ) : null}
+      </div>
+    </div>
+  </div>
+) : null}
     </div>
   )
 }

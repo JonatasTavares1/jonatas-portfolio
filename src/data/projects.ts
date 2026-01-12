@@ -101,6 +101,25 @@ export const projects: Project[] = [
     },
   ],
   },
+
+  {
+    slug: "automacao-emails",
+    title: "App para disparo de e-mails em massa",
+    subtitle: "Aplicativo desktop para enviar e-mails em grande quantidade de forma automática",
+    description:
+      "Aplicativo desktop para enviar e-mails em grande quantidade de forma automática",
+    image: [
+      "/projetos/automacao-propostas/automacao-propostas.png",
+    ],
+    stack: ["Python", "FastAPI", "CustomTkinter"],
+    highlights: [
+      "Disparo automático de e-mails",
+      "Segurança com login e senha",
+      "Padronização de corpo do e-mail e assinatura",
+      "Personalização completa, com mudança da cor da fonte, tamanho, sublinhar, negrito, itálico, etc..."
+    ],
+    
+  },
 ]
 
 
