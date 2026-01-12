@@ -110,6 +110,7 @@ export const projects: Project[] = [
       "Aplicativo desktop para enviar e-mails em grande quantidade de forma automática",
     image: [
       "/projetos/automacao-propostas/automacao-propostas.png",
+      "/projetos/automacao-propostas/automacao-propostas-2.png"
     ],
     stack: ["Python", "FastAPI", "CustomTkinter"],
     highlights: [
